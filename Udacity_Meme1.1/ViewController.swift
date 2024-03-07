@@ -15,18 +15,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak private var tabbar: UITabBar!
     private var tabbarDelegate = TabbarDelegate()
+    private let fontScreen = FontViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTabbar()
+        setupFontScreen()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupTabbar()
+    private func setupFontScreen() {
+        fontScreen.fontScreenDataSource = self
     }
     
     private func setupTabbar() {
+        tabbarDelegate.openFontScreen = {
+            self.present(self.fontScreen, animated: true)
+        }
         tabbar.delegate = tabbarDelegate
         let editImage = UIImage(named: "edit")?
             .withRenderingMode(.alwaysOriginal)
@@ -34,5 +38,13 @@ class ViewController: UIViewController {
                                           image: editImage,
                                           tag: TabbarTag.font.rawValue)
         tabbar.items = [fontTabbarItem]
+    }
+}
+
+extension ViewController: FontScreenDataSource {
+    
+    func didSelected(font: String) {
+        print(font)
+        fontScreen.dismiss(animated: true)
     }
 }

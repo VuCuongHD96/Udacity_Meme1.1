@@ -9,9 +9,15 @@ import UIKit
 
 class TabbarDelegate: NSObject, UITabBarDelegate {
     
+    var openFontScreen: (() -> Void)?
+    
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("--- debug --- item = ", item.tag)
         let fontsAvailable = UIFont.familyNames
-        print(fontsAvailable)
+        let tabbarTag = TabbarTag(rawValue: item.tag)
+        switch tabbarTag {
+        case .font:
+            openFontScreen?()
+        default: break
+        }
     }
 }

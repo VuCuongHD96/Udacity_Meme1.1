@@ -14,6 +14,8 @@
 		968583282B99F8CB00CF4603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968583272B99F8CB00CF4603 /* Assets.xcassets */; };
 		9685832B2B99F8CB00CF4603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968583292B99F8CB00CF4603 /* LaunchScreen.storyboard */; };
 		968583352B9A017300CF4603 /* TabbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583342B9A017300CF4603 /* TabbarDelegate.swift */; };
+		968583392B9A040B00CF4603 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583372B9A040B00CF4603 /* FontViewController.swift */; };
+		9685833A2B9A040B00CF4603 /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968583382B9A040B00CF4603 /* FontViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9685832A2B99F8CB00CF4603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9685832C2B99F8CB00CF4603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968583342B9A017300CF4603 /* TabbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarDelegate.swift; sourceTree = "<group>"; };
+		968583372B9A040B00CF4603 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		968583382B9A040B00CF4603 /* FontViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		9685831D2B99F8CA00CF4603 /* Udacity_Meme1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				968583362B9A03EB00CF4603 /* Screen */,
 				9685831E2B99F8CA00CF4603 /* AppDelegate.swift */,
 				968583202B99F8CA00CF4603 /* SceneDelegate.swift */,
 				968583222B99F8CA00CF4603 /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				9685832C2B99F8CB00CF4603 /* Info.plist */,
 			);
 			path = Udacity_Meme1.1;
+			sourceTree = "<group>";
+		};
+		968583362B9A03EB00CF4603 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				968583372B9A040B00CF4603 /* FontViewController.swift */,
+				968583382B9A040B00CF4603 /* FontViewController.xib */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9685832B2B99F8CB00CF4603 /* LaunchScreen.storyboard in Resources */,
+				9685833A2B9A040B00CF4603 /* FontViewController.xib in Resources */,
 				968583282B99F8CB00CF4603 /* Assets.xcassets in Resources */,
 				968583262B99F8CA00CF4603 /* Main.storyboard in Resources */,
 			);
@@ -144,6 +159,7 @@
 				968583232B99F8CA00CF4603 /* ViewController.swift in Sources */,
 				9685831F2B99F8CA00CF4603 /* AppDelegate.swift in Sources */,
 				968583352B9A017300CF4603 /* TabbarDelegate.swift in Sources */,
+				968583392B9A040B00CF4603 /* FontViewController.swift in Sources */,
 				968583212B99F8CA00CF4603 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

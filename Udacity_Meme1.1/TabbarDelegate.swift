@@ -14,6 +14,7 @@ class TabbarDelegate: NSObject, UITabBarDelegate {
     var openFontScreen: VoidHandler?
     var openAlbumSceen: VoidHandler?
     var openShareSceen: VoidHandler?
+    var openCameraSceen: VoidHandler?
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         let tabbarTag = TabbarTag(rawValue: item.tag)
@@ -22,6 +23,8 @@ class TabbarDelegate: NSObject, UITabBarDelegate {
             openFontScreen?()
         case .album:
             openAlbumSceen?()
+        case .camera:
+            openCameraSceen?()
         case .share:
             openShareSceen?()
         default: break

@@ -10,6 +10,7 @@ import UIKit
 enum TabbarTag: Int {
     case font = 0
     case album
+    case camera
     case share
 }
 
@@ -52,7 +53,13 @@ class ViewController: UIViewController {
                                            image: albumImage,
                                            tag: TabbarTag.album.rawValue)
 
-        tabbar.items = [fontTabbarItem, albumTabbarItem]
+        let cameraImage = UIImage(named: "camera")?
+            .withRenderingMode(.alwaysOriginal)
+        let cameraTabbarItem = UITabBarItem(title: "Camera",
+                                           image: cameraImage,
+                                           tag: TabbarTag.camera.rawValue)
+        
+        tabbar.items = [fontTabbarItem, albumTabbarItem, cameraTabbarItem]
 
         if isSelectedImage {
             let shareImage = UIImage(named: "share")?
@@ -60,7 +67,7 @@ class ViewController: UIViewController {
             let shareTabbarItem = UITabBarItem(title: "Share",
                                                image: shareImage,
                                                tag: TabbarTag.share.rawValue)
-            tabbar.items = [fontTabbarItem, albumTabbarItem, shareTabbarItem]
+            tabbar.items = [fontTabbarItem, albumTabbarItem, cameraTabbarItem, shareTabbarItem]
         }
     }
     
@@ -92,12 +99,21 @@ class ViewController: UIViewController {
         tabbarDelegate.openShareSceen = {
             self.openShareSceen()
         }
+        tabbarDelegate.openCameraSceen = {
+            self.openCameraSceen()
+        }
         tabbar.delegate = tabbarDelegate
     }
 
     // MARK: - Action
     private func openPhotoLibrary() {
         imagePickerManager.openPhotoLibrary { imagePicker in
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    private func openCameraSceen() {
+        imagePickerManager.openCamera { imagePicker in
             self.present(imagePicker, animated: true, completion: nil)
         }
     }

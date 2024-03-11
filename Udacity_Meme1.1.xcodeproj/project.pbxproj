@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9666C6AF2BA034A900007AFC /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666C6AE2BA034A900007AFC /* MemeTextField.swift */; };
 		9685831F2B99F8CA00CF4603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685831E2B99F8CA00CF4603 /* AppDelegate.swift */; };
 		968583212B99F8CA00CF4603 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583202B99F8CA00CF4603 /* SceneDelegate.swift */; };
 		968583232B99F8CA00CF4603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583222B99F8CA00CF4603 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9666C6AE2BA034A900007AFC /* MemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
 		9685831B2B99F8CA00CF4603 /* Udacity_Meme1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udacity_Meme1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9685831E2B99F8CA00CF4603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968583202B99F8CA00CF4603 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9666C6AD2BA0348F00007AFC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9666C6AE2BA034A900007AFC /* MemeTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		968583122B99F8CA00CF4603 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		968583362B9A03EB00CF4603 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9666C6AD2BA0348F00007AFC /* CustomView */,
 				9685833B2B9A0CE300CF4603 /* Font */,
 			);
 			path = Screen;
@@ -167,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9666C6AF2BA034A900007AFC /* MemeTextField.swift in Sources */,
 				968583232B99F8CA00CF4603 /* ViewController.swift in Sources */,
 				96E883442B9EC081007929BC /* ImagePickerManager.swift in Sources */,
 				9685831F2B99F8CA00CF4603 /* AppDelegate.swift in Sources */,

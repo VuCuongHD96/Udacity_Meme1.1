@@ -16,6 +16,7 @@
 		968583352B9A017300CF4603 /* TabbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583342B9A017300CF4603 /* TabbarDelegate.swift */; };
 		968583392B9A040B00CF4603 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583372B9A040B00CF4603 /* FontViewController.swift */; };
 		9685833A2B9A040B00CF4603 /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968583382B9A040B00CF4603 /* FontViewController.xib */; };
+		96E883442B9EC081007929BC /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E883432B9EC081007929BC /* ImagePickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		968583342B9A017300CF4603 /* TabbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarDelegate.swift; sourceTree = "<group>"; };
 		968583372B9A040B00CF4603 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		968583382B9A040B00CF4603 /* FontViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontViewController.xib; sourceTree = "<group>"; };
+		96E883432B9EC081007929BC /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9685831E2B99F8CA00CF4603 /* AppDelegate.swift */,
 				968583202B99F8CA00CF4603 /* SceneDelegate.swift */,
 				968583222B99F8CA00CF4603 /* ViewController.swift */,
+				96E883432B9EC081007929BC /* ImagePickerManager.swift */,
 				968583342B9A017300CF4603 /* TabbarDelegate.swift */,
 				968583242B99F8CA00CF4603 /* Main.storyboard */,
 				968583272B99F8CB00CF4603 /* Assets.xcassets */,
@@ -78,10 +81,18 @@
 		968583362B9A03EB00CF4603 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9685833B2B9A0CE300CF4603 /* Font */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		9685833B2B9A0CE300CF4603 /* Font */ = {
+			isa = PBXGroup;
+			children = (
 				968583372B9A040B00CF4603 /* FontViewController.swift */,
 				968583382B9A040B00CF4603 /* FontViewController.xib */,
 			);
-			path = Screen;
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968583232B99F8CA00CF4603 /* ViewController.swift in Sources */,
+				96E883442B9EC081007929BC /* ImagePickerManager.swift in Sources */,
 				9685831F2B99F8CA00CF4603 /* AppDelegate.swift in Sources */,
 				968583352B9A017300CF4603 /* TabbarDelegate.swift in Sources */,
 				968583392B9A040B00CF4603 /* FontViewController.swift in Sources */,

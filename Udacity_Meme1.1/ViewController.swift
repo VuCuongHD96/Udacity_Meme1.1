@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak private var tabbar: UITabBar!
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet private weak var groupView: UIView!
-    
+    @IBOutlet private weak var topTextField: MemeTextField!
+    @IBOutlet private weak var bottomTextField: MemeTextField!
+
     // MARK: - Property
     private var tabbarDelegate = TabbarDelegate()
     private let fontScreen = FontViewController()
@@ -119,7 +121,8 @@ class ViewController: UIViewController {
 extension ViewController: FontScreenDataSource {
     
     func didSelected(font: String) {
-        print(font)
+        topTextField.font = UIFont(name: font, size: 40)
+        bottomTextField.font = UIFont(name: font, size: 40)
         fontScreen.dismiss(animated: true)
     }
 }

@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupData()
+        
     }
     
     // MARK: - View
@@ -76,6 +77,27 @@ class ViewController: UIViewController {
         setupTabbarDelegate()
         setupFontScreen()
         setupImagePickerManager()
+        setupNotificationKeyboard()
+    }
+    
+    private func setupNotificationKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let groupViewMaxY = groupView.frame.maxY
+            let keyboardSizeMinY = keyboardSize.minY
+            if groupViewMaxY > keyboardSizeMinY && bottomTextField.isFirstResponder {
+                let alpha = keyboardSizeMinY - groupViewMaxY
+                groupView.transform = CGAffineTransform(translationX: 0, y: alpha)
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        groupView.transform = .identity
     }
     
     private func setupImagePickerManager() {

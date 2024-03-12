@@ -29,6 +29,11 @@ class ImagePickerManager: NSObject {
         imagePicker.sourceType = .photoLibrary
         action?(imagePicker)
     }
+    
+    func openCamera(action: ImagePickerHandler?) {
+        imagePicker.sourceType = .camera
+        action?(imagePicker)
+    }
 }
 
 extension ImagePickerManager: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

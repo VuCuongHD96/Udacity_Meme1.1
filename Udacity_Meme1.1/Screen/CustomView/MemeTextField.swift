@@ -31,5 +31,14 @@ class MemeTextField: UITextField {
         borderStyle = .none
         autocapitalizationType = .words
         textColor = .white
+        delegate = self
+    }
+}
+
+extension MemeTextField: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        resignFirstResponder()
+        return true
     }
 }

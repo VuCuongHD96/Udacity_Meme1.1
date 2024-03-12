@@ -10,6 +10,7 @@ import UIKit
 enum TabbarTag: Int {
     case font = 0
     case album
+    case share
 }
 
 class ViewController: UIViewController {
@@ -17,7 +18,8 @@ class ViewController: UIViewController {
     // MARK: - Outlet
     @IBOutlet weak private var tabbar: UITabBar!
     @IBOutlet weak private var imageView: UIImageView!
-
+    @IBOutlet private weak var groupView: UIView!
+    
     // MARK: - Property
     private var tabbarDelegate = TabbarDelegate()
     private let fontScreen = FontViewController()
@@ -32,21 +34,32 @@ class ViewController: UIViewController {
     
     // MARK: - View
     private func setupView() {
-        setupTabbar()
+        setupTabbar(isSelectedImage: false)
     }
     
-    private func setupTabbar() {
+    private func setupTabbar(isSelectedImage: Bool) {
         let editImage = UIImage(named: "edit")?
             .withRenderingMode(.alwaysOriginal)
         let fontTabbarItem = UITabBarItem(title: "Font",
                                           image: editImage,
                                           tag: TabbarTag.font.rawValue)
+        
         let albumImage = UIImage(named: "album")?
             .withRenderingMode(.alwaysOriginal)
         let albumTabbarItem = UITabBarItem(title: "Album",
                                            image: albumImage,
                                            tag: TabbarTag.album.rawValue)
+
         tabbar.items = [fontTabbarItem, albumTabbarItem]
+
+        if isSelectedImage {
+            let shareImage = UIImage(named: "share")?
+                .withRenderingMode(.alwaysOriginal)
+            let shareTabbarItem = UITabBarItem(title: "Share",
+                                               image: shareImage,
+                                               tag: TabbarTag.share.rawValue)
+            tabbar.items = [fontTabbarItem, albumTabbarItem, shareTabbarItem]
+        }
     }
     
     // MARK: - Data
@@ -59,6 +72,7 @@ class ViewController: UIViewController {
     private func setupImagePickerManager() {
         imagePickerManager.imageSelected = { image in
             self.imageView.image = image
+            self.setupTabbar(isSelectedImage: true)
         }
     }
     
@@ -73,13 +87,32 @@ class ViewController: UIViewController {
         tabbarDelegate.openAlbumSceen = {
             self.openPhotoLibrary()
         }
+        tabbarDelegate.openShareSceen = {
+            self.openShareSceen()
+        }
         tabbar.delegate = tabbarDelegate
     }
 
-    func openPhotoLibrary() {
+    // MARK: - Action
+    private func openPhotoLibrary() {
         imagePickerManager.openPhotoLibrary { imagePicker in
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    private func openShareSceen() {
+        let capturedImage = generateMemedImage()
+        let shareActivityViewController = UIActivityViewController(activityItems: [capturedImage],
+                                                                   applicationActivities: nil)
+        present(shareActivityViewController, animated: true)
+    }
+    
+    func generateMemedImage() -> UIImage {
+        UIGraphicsBeginImageContext(groupView.bounds.size)
+        groupView.drawHierarchy(in: groupView.bounds, afterScreenUpdates: true)
+        let memedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return memedImage
     }
 }
 

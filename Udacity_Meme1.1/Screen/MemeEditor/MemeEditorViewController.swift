@@ -38,6 +38,20 @@ class MemeEditorViewController: UIViewController {
     // MARK: - View
     private func setupView() {
         setupTabbar()
+        setupNavigationView()
+    }
+    
+    private func setupNavigationView() {
+        let shareButton = UIBarButtonItem(image: UIImage(named: "share"),
+                                          style: .plain, 
+                                          target: self,
+                                          action: #selector(openShareSceen))
+        navigationItem.leftBarButtonItem = shareButton
+        let cancelButton = UIBarButtonItem(title: "Cancel",
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(cancelAction))
+        navigationItem.rightBarButtonItem = cancelButton
     }
 
     private func setupTabbar() {
@@ -116,10 +130,10 @@ class MemeEditorViewController: UIViewController {
     }
 
     // MARK: - Action
-    @IBAction private func shareAction(_ sender: Any) {
-        openShareSceen()
+    @objc private func cancelAction() {
+        dismiss(animated: true)
     }
-    
+
     private func openPhotoLibrary() {
         imagePickerManager.openPhotoLibrary { imagePicker in
             self.present(imagePicker, animated: true, completion: nil)
@@ -132,7 +146,7 @@ class MemeEditorViewController: UIViewController {
         }
     }
     
-    private func openShareSceen() {
+    @objc private func openShareSceen() {
         let capturedImage = generateMemedImage()
         let shareActivityViewController = UIActivityViewController(activityItems: [capturedImage],
                                                                    applicationActivities: nil)

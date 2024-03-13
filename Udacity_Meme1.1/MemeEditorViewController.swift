@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Udacity_Meme1.1
 //
 //  Created by Work on 07/03/2024.
@@ -11,10 +11,9 @@ enum TabbarTag: Int {
     case font = 0
     case album
     case camera
-    case share
 }
 
-class ViewController: UIViewController {
+class MemeEditorViewController: UIViewController {
 
     // MARK: - Outlet
     @IBOutlet weak private var tabbar: UITabBar!
@@ -38,10 +37,10 @@ class ViewController: UIViewController {
     
     // MARK: - View
     private func setupView() {
-        setupTabbar(isSelectedImage: false)
+        setupTabbar()
     }
-    
-    private func setupTabbar(isSelectedImage: Bool) {
+
+    private func setupTabbar() {
         let editImage = UIImage(named: "edit")?
             .withRenderingMode(.alwaysOriginal)
         let fontTabbarItem = UITabBarItem(title: "Font",
@@ -53,23 +52,16 @@ class ViewController: UIViewController {
         let albumTabbarItem = UITabBarItem(title: "Album",
                                            image: albumImage,
                                            tag: TabbarTag.album.rawValue)
-
+        tabbar.items = [fontTabbarItem, albumTabbarItem]
+        
+#if !targetEnvironment(simulator)
         let cameraImage = UIImage(named: "camera")?
             .withRenderingMode(.alwaysOriginal)
         let cameraTabbarItem = UITabBarItem(title: "Camera",
-                                           image: cameraImage,
-                                           tag: TabbarTag.camera.rawValue)
-        
+                                            image: cameraImage,
+                                            tag: TabbarTag.camera.rawValue)
         tabbar.items = [fontTabbarItem, albumTabbarItem, cameraTabbarItem]
-
-        if isSelectedImage {
-            let shareImage = UIImage(named: "share")?
-                .withRenderingMode(.alwaysOriginal)
-            let shareTabbarItem = UITabBarItem(title: "Share",
-                                               image: shareImage,
-                                               tag: TabbarTag.share.rawValue)
-            tabbar.items = [fontTabbarItem, albumTabbarItem, cameraTabbarItem, shareTabbarItem]
-        }
+#endif
     }
     
     // MARK: - Data
@@ -103,7 +95,6 @@ class ViewController: UIViewController {
     private func setupImagePickerManager() {
         imagePickerManager.imageSelected = { image in
             self.imageView.image = image
-            self.setupTabbar(isSelectedImage: true)
         }
     }
     
@@ -118,9 +109,6 @@ class ViewController: UIViewController {
         tabbarDelegate.openAlbumSceen = {
             self.openPhotoLibrary()
         }
-        tabbarDelegate.openShareSceen = {
-            self.openShareSceen()
-        }
         tabbarDelegate.openCameraSceen = {
             self.openCameraSceen()
         }
@@ -128,6 +116,10 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Action
+    @IBAction private func shareAction(_ sender: Any) {
+        openShareSceen()
+    }
+    
     private func openPhotoLibrary() {
         imagePickerManager.openPhotoLibrary { imagePicker in
             self.present(imagePicker, animated: true, completion: nil)
@@ -144,7 +136,21 @@ class ViewController: UIViewController {
         let capturedImage = generateMemedImage()
         let shareActivityViewController = UIActivityViewController(activityItems: [capturedImage],
                                                                    applicationActivities: nil)
+        shareActivityViewController.completionWithItemsHandler = { activity, completed, items, error in
+            if completed {
+                self.saveMeme()
+                self.dismiss(animated:true, completion:nil)
+            }
+        }
         present(shareActivityViewController, animated: true)
+    }
+    
+    private func saveMeme() {
+        let capturedImage = generateMemedImage()
+        let meme = Meme(topText: topTextField.text,
+                        bottomText: bottomTextField.text,
+                        originalImage: imageView.image, 
+                        memedImage: capturedImage)
     }
     
     func generateMemedImage() -> UIImage {
@@ -156,7 +162,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: FontScreenDataSource {
+extension MemeEditorViewController: FontScreenDataSource {
     
     func didSelected(font: String) {
         topTextField.font = UIFont(name: font, size: 40)

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ODd-Yx-Znd">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection-->
+        <scene sceneID="erg-Vl-FRJ">
+            <objects>
+                <viewController id="dZM-vC-9oG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eE1-gd-Ixs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kQx-Se-m4m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collection" id="FdS-8z-ljp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLl-c8-Xic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="-143"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="mbN-cS-ZQq">
+            <objects>
+                <viewController id="5RM-xJ-Puu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSO-oN-cNx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XfT-fQ-peh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="wK4-vS-rMe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iZ-oL-bCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="-871"/>
+        </scene>
+        <!--Sent Memes-->
+        <scene sceneID="sgN-G6-qsY">
+            <objects>
+                <tabBarController id="Aio-xb-TBc" customClass="TabbarController" customModule="Udacity_Meme1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="kbM-2W-wMh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SCa-Vv-1iP">
+                            <connections>
+                                <action selector="addAction:" destination="Aio-xb-TBc" id="gud-Ir-rFb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AwE-gv-8Tz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5RM-xJ-Puu" kind="relationship" relationship="viewControllers" id="cGF-ZS-Yqf"/>
+                        <segue destination="dZM-vC-9oG" kind="relationship" relationship="viewControllers" id="NI4-5V-KqZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jz3-Ko-lLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2452" y="-567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QCR-XA-oj8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ODd-Yx-Znd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZu-1z-PNx">
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Aio-xb-TBc" kind="relationship" relationship="rootViewController" id="rxH-Xm-LBz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HsO-Py-Bv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3415" y="-567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="collection" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="list" width="21.333333969116211" height="21.333333969116211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

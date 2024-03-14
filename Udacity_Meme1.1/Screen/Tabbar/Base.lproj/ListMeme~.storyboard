@@ -25,6 +25,22 @@
             </objects>
             <point key="canvasLocation" x="-1532" y="-143"/>
         </scene>
+        <!--List-->
+        <scene sceneID="mbN-cS-ZQq">
+            <objects>
+                <viewController id="5RM-xJ-Puu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSO-oN-cNx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XfT-fQ-peh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="wK4-vS-rMe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iZ-oL-bCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="-871"/>
+        </scene>
         <!--Sent Memes-->
         <scene sceneID="sgN-G6-qsY">
             <objects>
@@ -42,7 +58,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kzb-vH-sTl" kind="relationship" relationship="viewControllers" id="cGF-ZS-Yqf"/>
+                        <segue destination="5RM-xJ-Puu" kind="relationship" relationship="viewControllers" id="cGF-ZS-Yqf"/>
                         <segue destination="dZM-vC-9oG" kind="relationship" relationship="viewControllers" id="NI4-5V-KqZ"/>
                     </connections>
                 </tabBarController>
@@ -68,19 +84,10 @@
             </objects>
             <point key="canvasLocation" x="-3415" y="-567"/>
         </scene>
-        <!--ListMeme-->
-        <scene sceneID="HyX-2O-4pb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ListMeme" id="kzb-vH-sTl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TkG-iO-H4M"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5F7-yL-ZS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1532" y="-871"/>
-        </scene>
     </scenes>
     <resources>
         <image name="collection" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="list" width="21.333333969116211" height="21.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

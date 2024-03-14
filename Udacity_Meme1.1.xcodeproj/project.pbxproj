@@ -19,6 +19,8 @@
 		968583392B9A040B00CF4603 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968583372B9A040B00CF4603 /* FontViewController.swift */; };
 		9685833A2B9A040B00CF4603 /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968583382B9A040B00CF4603 /* FontViewController.xib */; };
 		96E883442B9EC081007929BC /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E883432B9EC081007929BC /* ImagePickerManager.swift */; };
+		96F9C6472BA1FECC005A87D3 /* MemeEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F9C6462BA1FECC005A87D3 /* MemeEditorViewController.xib */; };
+		96F9C64E2BA20157005A87D3 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9C64D2BA20157005A87D3 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		968583372B9A040B00CF4603 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		968583382B9A040B00CF4603 /* FontViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontViewController.xib; sourceTree = "<group>"; };
 		96E883432B9EC081007929BC /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		96F9C6462BA1FECC005A87D3 /* MemeEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemeEditorViewController.xib; sourceTree = "<group>"; };
+		96F9C64D2BA20157005A87D3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +92,8 @@
 				968583362B9A03EB00CF4603 /* Screen */,
 				9685831E2B99F8CA00CF4603 /* AppDelegate.swift */,
 				968583202B99F8CA00CF4603 /* SceneDelegate.swift */,
-				968583222B99F8CA00CF4603 /* MemeEditorViewController.swift */,
 				96E883432B9EC081007929BC /* ImagePickerManager.swift */,
 				968583342B9A017300CF4603 /* TabbarDelegate.swift */,
-				968583242B99F8CA00CF4603 /* Main.storyboard */,
 				968583272B99F8CB00CF4603 /* Assets.xcassets */,
 				968583292B99F8CB00CF4603 /* LaunchScreen.storyboard */,
 				9685832C2B99F8CB00CF4603 /* Info.plist */,
@@ -102,6 +104,8 @@
 		968583362B9A03EB00CF4603 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				96F9C64C2BA20143005A87D3 /* Tabbar */,
+				96F9C6452BA1FEAE005A87D3 /* MemeEditor */,
 				9666C6AD2BA0348F00007AFC /* CustomView */,
 				9685833B2B9A0CE300CF4603 /* Font */,
 			);
@@ -115,6 +119,24 @@
 				968583382B9A040B00CF4603 /* FontViewController.xib */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		96F9C6452BA1FEAE005A87D3 /* MemeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				968583222B99F8CA00CF4603 /* MemeEditorViewController.swift */,
+				96F9C6462BA1FECC005A87D3 /* MemeEditorViewController.xib */,
+			);
+			path = MemeEditor;
+			sourceTree = "<group>";
+		};
+		96F9C64C2BA20143005A87D3 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				968583242B99F8CA00CF4603 /* Main.storyboard */,
+				96F9C64D2BA20157005A87D3 /* TabbarController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +201,7 @@
 				9685833A2B9A040B00CF4603 /* FontViewController.xib in Resources */,
 				968583282B99F8CB00CF4603 /* Assets.xcassets in Resources */,
 				968583262B99F8CA00CF4603 /* Main.storyboard in Resources */,
+				96F9C6472BA1FECC005A87D3 /* MemeEditorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +219,7 @@
 				9685831F2B99F8CA00CF4603 /* AppDelegate.swift in Sources */,
 				968583352B9A017300CF4603 /* TabbarDelegate.swift in Sources */,
 				968583392B9A040B00CF4603 /* FontViewController.swift in Sources */,
+				96F9C64E2BA20157005A87D3 /* TabbarController.swift in Sources */,
 				968583212B99F8CA00CF4603 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,7 @@ class MemeEditorViewController: UIViewController {
     private var tabbarDelegate = TabbarDelegate()
     private let fontScreen = FontViewController()
     let imagePickerManager = ImagePickerManager()
+    var memeSource = MemeSource.shared
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -165,6 +166,7 @@ class MemeEditorViewController: UIViewController {
                         bottomText: bottomTextField.text,
                         originalImage: imageView.image, 
                         memedImage: capturedImage)
+        memeSource.add(meme: meme)
     }
     
     func generateMemedImage() -> UIImage {

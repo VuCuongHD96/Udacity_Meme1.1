@@ -9,6 +9,8 @@ import UIKit
 
 final class TabbarController: UITabBarController {
     
+    var memeSource = MemeSource.shared
+    
     @IBAction func addAction(_ sender: Any) {
         let memeEditorScreen = MemeEditorViewController()
         let navigationController = UINavigationController(rootViewController: memeEditorScreen)

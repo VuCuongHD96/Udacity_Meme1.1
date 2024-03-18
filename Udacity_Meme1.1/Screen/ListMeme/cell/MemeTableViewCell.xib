@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="118" id="KGk-i7-Jjw" customClass="MemeTableViewCell" customModule="Udacity_Meme1_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDs-ho-qr5">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gDs-ho-qr5" secondAttribute="height" multiplier="1:1" id="Ojh-Jj-NjM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-1B-diY">
+                        <rect key="frame" x="128" y="0.0" width="192" height="118"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mEQ-1B-diY" secondAttribute="bottom" id="GgF-BN-Ksh"/>
+                    <constraint firstItem="gDs-ho-qr5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IAM-8g-EWX"/>
+                    <constraint firstItem="gDs-ho-qr5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LcZ-5A-9M9"/>
+                    <constraint firstItem="mEQ-1B-diY" firstAttribute="leading" secondItem="gDs-ho-qr5" secondAttribute="trailing" constant="10" id="NJS-s3-vlc"/>
+                    <constraint firstItem="mEQ-1B-diY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Oeo-YF-NQb"/>
+                    <constraint firstAttribute="trailing" secondItem="mEQ-1B-diY" secondAttribute="trailing" id="jp0-c8-XLZ"/>
+                    <constraint firstAttribute="bottom" secondItem="gDs-ho-qr5" secondAttribute="bottom" id="n8x-L4-abN"/>
+                    <constraint firstItem="gDs-ho-qr5" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.36875" id="oz5-Rt-NNc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="memeImageView" destination="gDs-ho-qr5" id="XSn-kq-dTW"/>
+                <outlet property="memeLabel" destination="mEQ-1B-diY" id="2Rc-qc-yoY"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-37.323943661971832"/>
+        </tableViewCell>
+    </objects>
+</document>

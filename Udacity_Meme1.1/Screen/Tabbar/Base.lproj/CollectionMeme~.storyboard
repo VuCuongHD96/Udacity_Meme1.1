@@ -4,9 +4,27 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Collection-->
+        <scene sceneID="erg-Vl-FRJ">
+            <objects>
+                <viewController id="dZM-vC-9oG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eE1-gd-Ixs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kQx-Se-m4m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collection" id="FdS-8z-ljp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLl-c8-Xic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="-143"/>
+        </scene>
         <!--Sent Memes-->
         <scene sceneID="sgN-G6-qsY">
             <objects>
@@ -25,7 +43,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kzb-vH-sTl" kind="relationship" relationship="viewControllers" id="cGF-ZS-Yqf"/>
-                        <segue destination="syi-tb-fhZ" kind="relationship" relationship="viewControllers" id="8hh-tB-K4A"/>
+                        <segue destination="dZM-vC-9oG" kind="relationship" relationship="viewControllers" id="NI4-5V-KqZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jz3-Ko-lLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -60,15 +78,11 @@
             </objects>
             <point key="canvasLocation" x="-1532" y="-871"/>
         </scene>
-        <!--CollectionMeme-->
-        <scene sceneID="L9X-hT-Oa8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CollectionMeme" id="syi-tb-fhZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="woH-A9-N7r"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zcu-V9-AAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1342" y="-386"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="collection" width="21.333333969116211" height="21.333333969116211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

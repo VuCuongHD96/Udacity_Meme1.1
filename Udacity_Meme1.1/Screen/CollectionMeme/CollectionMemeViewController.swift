@@ -63,3 +63,14 @@ extension CollectionMemeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: 100)
     }
 }
+
+extension CollectionMemeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, 
+                        didSelectItemAt indexPath: IndexPath) {
+        let memeItem = memeList[indexPath.row]
+        let viewController = MemeDetailViewController()
+        viewController.meme = memeItem
+        present(viewController, animated: true)
+    }
+}

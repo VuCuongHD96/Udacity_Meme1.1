@@ -93,10 +93,42 @@
             filePath = "Udacity_Meme1.1/Screen/ListMeme/ListMemeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E35B07B-F4E4-4522-9C8A-618D82BE75A9 - 378b4c84d482d870"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Udacity_Meme1_1.ListMemeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Udacity_Meme1.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_Meme1.1/Udacity_Meme1.1/Screen/ListMeme/ListMemeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "0E35B07B-F4E4-4522-9C8A-618D82BE75A9 - 378b4c84d482d851"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Udacity_Meme1_1.ListMemeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Udacity_Meme1.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_Meme1.1/Udacity_Meme1.1/Screen/ListMeme/ListMemeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "768">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

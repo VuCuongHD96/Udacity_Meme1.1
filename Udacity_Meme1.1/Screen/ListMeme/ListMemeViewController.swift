@@ -31,6 +31,7 @@ class ListMemeViewController: UIViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         let nib = UINib(nibName: Constant.nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: Constant.nibName)
     }
@@ -49,5 +50,15 @@ extension ListMemeViewController: UITableViewDataSource {
         let memeItem = memeList[indexPath.row]
         cell.setupContent(meme: memeItem)
         return cell
+    }
+}
+
+extension ListMemeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let memeItem = memeList[indexPath.row]
+        let viewController = MemeDetailViewController()
+        viewController.meme = memeItem
+        present(viewController, animated: true)
     }
 }

@@ -37,7 +37,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5To-Cz-cxi" userLabel="GroupView">
                     <rect key="frame" x="0.0" y="59" width="393" height="676"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-2w-4iu">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-2w-4iu">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="676"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFm-5N-Qv8" customClass="MemeTextField" customModule="Udacity_Meme1_1" customModuleProvider="target">

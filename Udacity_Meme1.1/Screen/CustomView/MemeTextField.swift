@@ -29,7 +29,7 @@ class MemeTextField: UITextField {
         defaultTextAttributes = memeTextAttributes
         textAlignment = .center
         borderStyle = .none
-        autocapitalizationType = .words
+        autocapitalizationType = .allCharacters
         textColor = .white
         delegate = self
     }
